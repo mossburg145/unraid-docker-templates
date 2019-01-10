@@ -20,6 +20,10 @@
   <BindTime>true</BindTime>
   <Privileged>true</Privileged>
   <Environment>
+     <Variable>
+      <Name>SUPERVISOR_SHARE</Name>
+      <Value>SUPERVISOR_SHARE=${SUPERVISOR_SHARE-/mnt/cache/app_config/data}</Value>
+    </Variable>
     <Variable>
       <Name>SUPERVISOR_NAME</Name>
       <Value>SUPERVISOR_NAME=hassio_supervisor</Value>
