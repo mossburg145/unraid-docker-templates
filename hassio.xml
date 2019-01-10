@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Beta>False</Beta>
+  <Category>HomeAutomation</Category>
+  <Name>hass.io</Name>
+  <Overview>First private cloud OS for home automation.</Overview>
+  <license>Apache-2</license>
+  <Project>https://home-assistant.io</Project>
+  <Support>https://home-assistant.io/help/</Support>
+  <Description>
+    Hass.io is a Docker based system for managing your Home Assistant installation and related applications. The system is controlled via Home Assistant which communicates with the supervisor. The supervisor provides an API to manage the installation. This includes changing network settings or installing and updating software.[br][br]
+    Hass.io will run Home Assistant on port 8123.[br][br]
+    [b][span style='color: #E80000;']Directions:[/span][/b][br]
+    [b]/config[/b] : in this path, Home Assistant will store it's configuration files.[br][br]
+
+  </Description>
+  <Registry>https://registry.hub.docker.com/u/homeassistant/home-assistant/</Registry>
+  <GitHub>https://hub.docker.com/r/homeassistant/amd64-hassio-supervisor</GitHub>
+  <Repository>homeassistant/amd64-hassio-supervisor</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Environment>
+    <Variable>
+      <Name>SUPERVISOR_SHARE</Name>
+      <Value>${SUPERVISOR_SHARE-/mnt/cache/appdata/hassio}</Value>
+    </Variable>
+    <Variable>
+      <Name>SUPERVISOR_NAME</Name>
+      <Value>hassio_supervisor</Value>
+    </Variable>
+    <Variable>
+      <Name>HOMEASSISTANT_REPOSITORY</Name>
+      <Value>homeassistant/qemux86-homeassistant</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish />
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>${SUPERVISOR_SHARE-/mnt/cache/appdata/hassio}/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8123]</WebUI>
+  <Banner>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-banner.png</Banner>
+  <Icon>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-icon.png</Icon>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/cache/app_config/home-assistant" Mode="rw" Description="This path is where Home Assistant will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
