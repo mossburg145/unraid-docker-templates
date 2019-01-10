@@ -22,15 +22,15 @@
   <Environment>
     <Variable>
       <Name>SUPERVISOR_SHARE</Name>
-      <Value>${SUPERVISOR_SHARE-/mnt/cache/appdata/hassio}</Value>
+      <Value>SUPERVISOR_SHARE=${SUPERVISOR_SHARE-/mnt/cache/appdata/hassio}</Value>
     </Variable>
     <Variable>
       <Name>SUPERVISOR_NAME</Name>
-      <Value>hassio_supervisor</Value>
+      <Value>SUPERVISOR_NAME=hassio_supervisor</Value>
     </Variable>
     <Variable>
       <Name>HOMEASSISTANT_REPOSITORY</Name>
-      <Value>homeassistant/qemux86-homeassistant</Value>
+      <Value>HOMEASSISTANT_REPOSITORY=homeassistant/qemux86-homeassistant</Value>
     </Variable>
   </Environment>
   <Networking>
