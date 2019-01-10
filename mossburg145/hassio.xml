@@ -2,7 +2,7 @@
 <Container version="2">
   <Beta>False</Beta>
   <Category>HomeAutomation</Category>
-  <Name>hass.io</Name>
+  <Name>hass.io_Supervisor</Name>
   <Overview>First private cloud OS for home automation.</Overview>
   <license>Apache-2</license>
   <Project>https://home-assistant.io</Project>
