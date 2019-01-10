@@ -39,7 +39,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>${SUPERVISOR_SHARE-/mnt/cache/appdata/hassio}/</HostDir>
+      <HostDir>/mnt/cache/appdata/data}/</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
