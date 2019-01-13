@@ -22,7 +22,7 @@
   <Environment>
      <Variable>
       <Name>SUPERVISOR_SHARE</Name>
-      <Value>SUPERVISOR_SHARE=${SUPERVISOR_SHARE-/mnt/cache/app_config/data}</Value>
+      <Value>SUPERVISOR_SHARE=${SUPERVISOR_SHARE-/mnt/user/app_config/data}</Value>
     </Variable>
     <Variable>
       <Name>SUPERVISOR_NAME</Name>
@@ -39,7 +39,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/data}/</HostDir>
+      <HostDir>/mnt/user/appdata/data}/</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
