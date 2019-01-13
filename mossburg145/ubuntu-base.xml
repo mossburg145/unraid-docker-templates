@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>-base</Name>
+  <Beta>False</Beta>
+  <Category>Productivity:</Category>
+  <Date>2018-10-25</Date>
+  <Support>http://www.google.com</Support>
+  <Overview>Ubuntu</Overview>
+  <Description>Ubuntu base used for testing</Description>
+  <Registry>https://registry.hub.docker.com/r/jakezp/ubuntu-base</Registry>
+  <Repository>jakezp/ubuntu-base</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+  <Networking>
+    <Mode>br0</Mode>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ubuntu-base/cron</HostDir>
+      <ContainerDir>/var/spool/cron/crontabs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <Banner>https://www.linuxjournal.com/sites/default/files/styles/1700x1000/public/nodeimage/story/bash-icon_0.png</Banner>
+  <Icon>https://www.linuxjournal.com/sites/default/files/styles/1700x1000/public/nodeimage/story/bash-icon_0.png</Icon>
+</Container>
