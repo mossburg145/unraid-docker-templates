@@ -1,21 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Containers>
+<?xml version="1.0"?>
+<Container version="2">
   <Name>HASSIO Supervisor</Name>
-  </Description>
-  <Overview>
-    First private cloud OS for home automation.
-  </Overview>
-  <Registry>>https://registry.hub.docker.com/u/homeassistant/home-assistant/</Registry>
-  <GitHub>https://github.com/binhex/arch-plex</GitHub>
   <Repository>homeassistant/amd64-hassio-supervisor</Repository>
-  <BindTime>true</BindTime>
+  <Registry>https://registry.hub.docker.com/u/homeassistant/home-assistant/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>true</Privileged>
+  <Support>https://home-assistant.io/help/</Support>
+  <Project>https://home-assistant.io</Project>
+  <Overview>First private cloud OS for home automation.</Overview>
+  <Category>HomeAutomation</Category>
+  <WebUI>http://[IP]:[PORT:8123]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1547403962</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>First private cloud OS for home automation.</Description>
   <Networking>
     <Mode>host</Mode>
-    <Publish>
-    </Publish>
+    <Publish/>
   </Networking>
-  </Environment>
   <Data>
     <Volume>
       <HostDir>/etc/locatetime</HostDir>
@@ -37,7 +46,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8123]</WebUI>
-  <Icon>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-icon.png</Icon>
-  <ExtraParams></ExtraParams>
-</Containers>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config Directory" Target="/config" Default="/mnt/user/appdata/HASS.IO" Mode="rw" Description="This path is where Home Assistant will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hassio</Config>
+</Container>
