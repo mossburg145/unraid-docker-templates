@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <Beta>False</Beta>
+  <Name>HASSIO Supervisor</Name>
+  <Description>
+  </Description>
+  <Overview>
+    First private cloud OS for home automation.
+  </Overview>
+  <Registry>>https://registry.hub.docker.com/u/homeassistant/home-assistant/</Registry>
+  <GitHub>https://github.com/binhex/arch-plex</GitHub>
+  <Repository>homeassistant/amd64-hassio-supervisor</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>true</Privileged>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish>
+    </Publish>
+  </Networking>
+  <Environment>
+    <Variable>
+      <Name>TRANS_DIR</Name>
+      <Value>/config/transcode</Value>
+    </Variable>
+    <Variable>
+      <Name>UMASK</Name>
+      <Value>000</Value>
+    </Variable>
+    <Variable>
+      <Name>PUID</Name>
+      <Value>99</Value>
+    </Variable>
+    <Variable>
+      <Name>PGID</Name>
+      <Value>100</Value>
+    </Variable>
+  </Environment>
+  <Data>
+    <Volume>
+      <HostDir>/etc/locatetime</HostDir>
+      <ContainerDir>/etc/locatetime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hassio</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/dbus</HostDir>
+      <ContainerDir>/var/run/dbus</ContainerDir>
+      <Mode>rw</Mode>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8123]</WebUI>
+  <Icon>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-icon.png</Icon>
+  <ExtraParams></ExtraParams>
+</Containers>
