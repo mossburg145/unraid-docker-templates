@@ -1,37 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <Container version="2">
-  <Beta>False</Beta>
-  <Category>HomeAutomation</Category>
-  <Name>hass.io</Name>
-  <Overview>First private cloud OS for home automation.</Overview>
-  <license>Apache-2</license>
-  <Project>https://home-assistant.io</Project>
-  <Support>https://home-assistant.io/help/</Support>
-  <Description>
-    Hass.io is a Docker based system for managing your Home Assistant installation and related applications. The system is controlled via Home Assistant which communicates with the supervisor. The supervisor provides an API to manage the installation. This includes changing network settings or installing and updating software.[br][br]
-    Hass.io will run Home Assistant on port 8123.[br][br]
-    [b][span style='color: #E80000;']Directions:[/span][/b][br]
-    [b]/config[/b] : in this path, Home Assistant will store it's configuration files.[br][br]
-
-  </Description>
-  <Registry>https://registry.hub.docker.com/u/homeassistant/home-assistant/</Registry>
-  <GitHub>https://hub.docker.com/r/homeassistant/amd64-hassio-supervisor</GitHub>
+  <Name>HASSIO Supervisor</Name>
   <Repository>homeassistant/amd64-hassio-supervisor</Repository>
-  <BindTime>true</BindTime>
+  <Registry>https://registry.hub.docker.com/u/homeassistant/home-assistant/</Registry>
+  <Network>host</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
   <Privileged>true</Privileged>
+  <Support>https://home-assistant.io/help/</Support>
+  <Project>https://home-assistant.io</Project>
+  <Overview>First private cloud OS for home automation.</Overview>
+  <Category>HomeAutomation</Category>
+  <WebUI>http://[IP]:[PORT:8123]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1547403962</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>First private cloud OS for home automation.</Description>
   <Networking>
     <Mode>host</Mode>
-    <Publish />
+    <Publish/>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/hassio/</HostDir>
+      <HostDir>/etc/locatetime</HostDir>
+      <ContainerDir>/etc/locatetime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hassio</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/var/run/dbus</HostDir>
+      <ContainerDir>/var/run/dbus</ContainerDir>
+      <Mode>rw</Mode>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8123]</WebUI>
-  <Banner>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-banner.png</Banner>
-  <Icon>https://raw.githubusercontent.com/balloob/unraid-docker-templates/master/balloob/home-assistant-icon.png</Icon>
-  <Config Name="Config Directory" Target="/config" Default="/mnt/cache/app_config/home-assistant" Mode="rw" Description="This path is where Home Assistant will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Config Directory" Target="/data" Default="/mnt/user/appdata/hassio" Mode="rw" Description="This path is where Home Assistant will store it's configuration files." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hassio</Config>
 </Container>
