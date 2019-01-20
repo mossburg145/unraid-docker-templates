@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Container version="2">
+<Container version>
   <Name>HASSIO Supervisor</Name>
   <Repository>homeassistant/amd64-hassio-supervisor</Repository>
   <Registry>https://registry.hub.docker.com/u/homeassistant/home-assistant/</Registry>
