@@ -18,8 +18,7 @@
   <GitHub>https://hub.docker.com/r/homeassistant/amd64-hassio-supervisor</GitHub>
   <Repository>homeassistant/amd64-hassio-supervisor</Repository>
   <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
-  <Environment/>
+  <Privileged>true</Privileged>
   <Networking>
     <Mode>host</Mode>
     <Publish />
