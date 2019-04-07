@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>gdrive</Name>
+  <Repository>patricol/alpine-gdrive:latest</Repository>
+  <Registry>https://hub.docker.com/r/patricol/alpine-gdrive/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Patricol/docker-templates/issues</Support>
+  <Project>https://hub.docker.com/r/patricol/alpine-gdrive/</Project>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/patricol/docker-templates/master/patricol/alpine-gdrive.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/patricol/docker-templates/master/patricol/images/alpine-gdrive.png</Icon>
+  <ExtraParams>--security-opt apparmor:unconfined --cap-add mknod --cap-add SYS_ADMIN --device /dev/fuse</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/gdrive/</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw,shared</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gdrive</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>CLIENT_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CLIENT_SECRET</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>See description</Value>
+      <Name>VERIFICATION_CODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>allow_other</Value>
+      <Name>MOUNT_OPTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>PUID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>PGID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Path 2" Target="/data" Default="/mnt/user/gdrive/" Mode="rw,shared" Description="Container Path: /data" Type="Path" Display="always" Required="true" Mask="false">/mnt/gdrive/</Config>
+  <Config Name="Key 1" Target="CLIENT_ID" Default="Get here: https://console.cloud.google.com/apis/credentials (without .apps.googleusercontent.com ending)" Mode="" Description="Container Variable: CLIENT_ID" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Key 2" Target="CLIENT_SECRET" Default="Get here: https://console.cloud.google.com/apis/credentials" Mode="" Description="Container Variable: CLIENT_SECRET" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Key 3" Target="VERIFICATION_CODE" Default="See description" Mode="" Description="Container Variable: VERIFICATION_CODE" Type="Variable" Display="always" Required="false" Mask="false">See description</Config>
+  <Config Name="Key 4" Target="MOUNT_OPTS" Default="" Mode="" Description="Container Variable: MOUNT_OPTS" Type="Variable" Display="always" Required="false" Mask="false">allow_other</Config>
+  <Config Name="Key 5" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="always" Required="false" Mask="false">99</Config>
+  <Config Name="Key 6" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="always" Required="false" Mask="false">100</Config>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/gdrive" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/gdrive</Config>
+</Container>
