@@ -6,9 +6,9 @@
 #	Add PPA and install app          	#
 #							                  		#
 #####################################
-add-apt-repository -y ppa:inkscape.dev/stable
+add-apt-repository -y ppa:otto-kesselgulasch/gimp
 apt-get update -qq
-apt-get install -qy inkscape
+apt-get install -qy gimp
 
 #####################################
 #	Add configs and needed stuff    	#
