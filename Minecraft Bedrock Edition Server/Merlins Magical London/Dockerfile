@@ -1,16 +1,9 @@
     
-FROM ubuntu:bionic
-
-ENV AUTH_CODE=""
-
-VOLUME /source /dest /complete
+FROM ich777/minecraftbedrockserver
 
 RUN apt-get update
 RUN apt-get install -y \
-    unzip \
-    wget \
-    ffmpeg \
-    bc
+    unzip 
 RUN wget https://github.com/KrumpetPirate/AAXtoMP3/archive/master.zip && \
   unzip master.zip -d /
 
