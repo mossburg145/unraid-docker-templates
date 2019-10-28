@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
   <Name>Inkscape</Name>
-  <Description>Inkscape is professional quality vector graphics software which runs on Windows, Mac OS X and GNU/Linux. It is used by design professionals and hobbyists worldwide, for creating a wide variety of graphics such as illustrations, icons, logos, diagrams, maps and web graphics. Inkscape uses the W3C open standard SVG (Scalable Vector Graphics) as its native format, and is free and open-source software.&#13;
+  <Description>GIMP.&#13;
 [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
 [b]/config[/b] : Folder where GIMP's configuration is stored[br]&#13;
 [b]8080[/b] : xRDP web-interface.[br]
@@ -28,16 +28,21 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/Inkscape</HostDir>
-      <ContainerDir>/nobody/.config/inkscape/</ContainerDir>
+      <HostDir>/tmp/.X11-unix</HostDir>
+      <ContainerDir>/tmp/.X11-unix</ContainerDir>
       <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/GIM/fonts</HostDir>
+      <ContainerDir>/usr/share/fonts</ContainerDir>
+      <Mode>ro</Mode>
     </Volume>
   </Data>
   <Version></Version>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <Banner></Banner>
   <Icon></Icon>
-  <ExtraParams></ExtraParams>
+  <ExtraParams>-e DISPLAY=$DISPLAY -e PGID=0 -e PUID=0 -e DISPLAY=unix:0 </ExtraParams>
   <Overview>I</Overview>
   <Beta>False</Beta>
   <Category>Productivity:</Category>
