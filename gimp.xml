@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>Inkscape</Name>
+  <Name>GIMP</Name>
   <Description>GIMP.&#13;
 [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
 [b]/config[/b] : Folder where GIMP's configuration is stored[br]&#13;
