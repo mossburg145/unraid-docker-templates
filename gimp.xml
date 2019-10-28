@@ -28,11 +28,6 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/tmp/.X11-unix</HostDir>
-      <ContainerDir>/tmp/.X11-unix</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
       <HostDir>/mnt/cache/appdata/GIMP/data</HostDir>
       <ContainerDir>/data</ContainerDir>
       <Mode>rw</Mode>
@@ -47,7 +42,7 @@
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <Banner></Banner>
   <Icon></Icon>
-  <ExtraParams>-e DISPLAY=$DISPLAY -e PGID=0 -e PUID=0 -e DISPLAY=unix:0 </ExtraParams>
+  <ExtraParams></ExtraParams>
   <Overview>I</Overview>
   <Beta>False</Beta>
   <Category>Productivity:</Category>
