@@ -33,7 +33,12 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/GIM/fonts</HostDir>
+      <HostDir>/mnt/cache/appdata/GIMP/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/GIMP/fonts</HostDir>
       <ContainerDir>/usr/share/fonts</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
