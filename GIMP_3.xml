@@ -6,8 +6,8 @@
 [b]/config[/b] : Folder where GIMP's configuration is stored[br]&#13;
 [b]8080[/b] : xRDP web-interface.[br]
 [b]3389[/b] : xRDP client interface</Description>
-  <Registry>accetto/ubuntu-vnc-xfce-gimp-g3</Registry>
-  <Repository>accetto/ubuntu-vnc-xfce-gimp-g3</Repository>
+  <Registry>accetto/ubuntu-vnc-xfce-gimp-g3:vnc-novnc-firefox-plusaccetto/ubuntu-vnc-xfce-gimp-g3</Registry>
+  <Repository>accetto/ubuntu-vnc-xfce-gimp-g3:vnc-novnc-firefox-plusaccetto/ubuntu-vnc-xfce-gimp-g3</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
