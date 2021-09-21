@@ -20,8 +20,8 @@
         <Protocol>tcp</Protocol>
       </Port>
 	  <Port>
-        <HostPort>3389</HostPort>
-        <ContainerPort>3389</ContainerPort>
+        <HostPort>26901</HostPort>
+        <ContainerPort>6901</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -32,14 +32,9 @@
       <ContainerDir>/home/headless/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/gimp-g3/fonts</HostDir>
-      <ContainerDir>/usr/share/fonts/</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
   </Data>
   <Version></Version>
-  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <WebUI>http://[IP]:[PORT:26901]</WebUI>
   <Banner>https://www.gimp.org/images/frontpage/wilber-big.png</Banner>
   <Icon>https://www.gimp.org/images/frontpage/wilber-big.png</Icon>
   <ExtraParams></ExtraParams>
