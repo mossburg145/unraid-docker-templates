@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>GIMP</Name>
+  <Description>GIMP is a free and open-source raster graphics editor[4] used for image retouching and editing, free-form drawing, converting between different image formats, and more specialized tasks.&#13;
+[br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
+[b]/config[/b] : Folder where GIMP's configuration is stored[br]&#13;
+[b]8080[/b] : xRDP web-interface.[br]
+[b]3389[/b] : xRDP client interface</Description>
+  <Registry>localhost:5000/mossburg145/gimp</Registry>
+  <Repository>localhost:5000/mossburg145/gimp</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+	  <Port>
+        <HostPort>3389</HostPort>
+        <ContainerPort>3389</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/GIMP</HostDir>
+      <ContainerDir>/nobody/.config/gimp/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/GIMP/fonts</HostDir>
+      <ContainerDir>/usr/share/fonts/</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Version></Version>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <Banner>https://www.gimp.org/images/frontpage/wilber-big.png</Banner>
+  <Icon>https://www.gimp.org/images/frontpage/wilber-big.png</Icon>
+  <ExtraParams></ExtraParams>
+  <Overview>GIMP is a free and open-source raster graphics editor[4] used for image retouching and editing, free-form drawing, converting between different image formats, and more specialized tasks.</Overview>
+  <Beta>Truee</Beta>
+  <Category>Productivity:</Category>
+  <Date>2019-10-29</Date> 
+  <Support></Support>
+</Container>
