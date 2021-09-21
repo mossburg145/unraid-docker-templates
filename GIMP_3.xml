@@ -6,8 +6,8 @@
 [b]/config[/b] : Folder where GIMP's configuration is stored[br]&#13;
 [b]8080[/b] : xRDP web-interface.[br]
 [b]3389[/b] : xRDP client interface</Description>
-  <Registry>localhost:5000/mossburg145/gimp</Registry>
-  <Repository>localhost:5000/mossburg145/gimp</Repository>
+  <Registry>accetto/ubuntu-vnc-xfce-gimp-g3</Registry>
+  <Repository>accetto/ubuntu-vnc-xfce-gimp-g3</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
@@ -15,8 +15,8 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8080</HostPort>
-        <ContainerPort>8080</ContainerPort>
+        <HostPort>25901</HostPort>
+        <ContainerPort>5901</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
 	  <Port>
@@ -28,12 +28,12 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/GIMP</HostDir>
-      <ContainerDir>/nobody/.config/gimp/</ContainerDir>
+      <HostDir>/mnt/user/appdata/gimp-g3</HostDir>
+      <ContainerDir>/home/headless/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/GIMP/fonts</HostDir>
+      <HostDir>/mnt/user/appdata/gimp-g3/fonts</HostDir>
       <ContainerDir>/usr/share/fonts/</ContainerDir>
       <Mode>ro</Mode>
     </Volume>
