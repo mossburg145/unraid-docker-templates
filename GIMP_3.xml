@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-  <Name>GIMP</Name>
+  <Name>GIMP V-3</Name>
   <Description>GIMP is a free and open-source raster graphics editor[4] used for image retouching and editing, free-form drawing, converting between different image formats, and more specialized tasks.&#13;
 [br][br][b][u][span style='color: #E80000;']Configuration[/span][/u][/b][br]&#13;
 [b]/config[/b] : Folder where GIMP's configuration is stored[br]&#13;
