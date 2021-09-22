@@ -39,7 +39,7 @@
     </Volume>
   </Data>
   <Version></Version>
-  <WebUI>http://[IP]:[PORT:26901]</WebUI>
+  <WebUI>http://[IP]:[PORT:36901]</WebUI>
   <Banner>https://media.inkscape.org/static/images/inkscape-logo.svg</Banner>
   <Icon>https://media.inkscape.org/static/images/inkscape-logo.svg</Icon>
   <ExtraParams></ExtraParams>
