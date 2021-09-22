@@ -15,12 +15,12 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>25901</HostPort>
+        <HostPort>35901</HostPort>
         <ContainerPort>5901</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
 	  <Port>
-        <HostPort>26901</HostPort>
+        <HostPort>36901</HostPort>
         <ContainerPort>6901</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -30,6 +30,11 @@
     <Volume>
       <HostDir>/mnt/user/appdata/inkscape-g3</HostDir>
       <ContainerDir>/home/headless/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/media/images</HostDir>
+      <ContainerDir>/home/headless/Desktop/Images/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
