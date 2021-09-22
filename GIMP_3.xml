@@ -32,6 +32,11 @@
       <ContainerDir>/home/headless/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/mnt/user/media/images</HostDir>
+      <ContainerDir>/home/headless/Desktop/Images/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <Version></Version>
   <WebUI>http://[IP]:[PORT:26901]</WebUI>
