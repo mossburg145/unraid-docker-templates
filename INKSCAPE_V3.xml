@@ -40,8 +40,8 @@
   </Data>
   <Version></Version>
   <WebUI>http://[IP]:[PORT:36901]</WebUI>
-  <Banner>https://media.inkscape.org/static/images/inkscape-logo.svg</Banner>
-  <Icon>https://media.inkscape.org/static/images/inkscape-logo.svg</Icon>
+  <Banner>https://upload.wikimedia.org/wikipedia/commons/0/0d/Inkscape_Logo.svg</Banner>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/0/0d/Inkscape_Logo.svg</Icon>
   <ExtraParams></ExtraParams>
   <Overview>Inkscape is a Free and open source vector graphics editor for GNU/Linux, Windows and MacOS X.</Overview>
   <Beta>Truee</Beta>
