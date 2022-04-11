@@ -1,1 +1,39 @@
 
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NTP</Name>
+  <Repository>cturra/ntp</Repository>
+  <Registry/>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://github.com/mossburg145/unraid-docker-templates/raw/master/icons/ntp.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1649709443</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>123</HostPort>
+        <ContainerPort>123</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="123" Default="" Mode="tcp" Description="Container Port: 123" Type="Port" Display="always" Required="false" Mask="false">123</Config>
+</Container>
